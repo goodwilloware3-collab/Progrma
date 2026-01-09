@@ -1,5 +1,6 @@
 
 import random
+import sys
 def guess_number(name="Player_one"):
     game_count=0
     player_win=0
@@ -38,5 +39,11 @@ def guess_number(name="Player_one"):
     play_guess_number()
 guess_number()
 print("Thanks for playing!")
-
-    
+response=input("Do you want to play again? (yes/no): ").strip().lower()
+while response=="yes":
+    guess_number()
+    print("Thanks for playing!")
+    response=input("Do you want to play again? (yes/no): ").strip().lower()
+if response=="no":
+    print("Goodbye!")
+    sys.exit()
