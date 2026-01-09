@@ -1,0 +1,11 @@
+import tkinter as tk
+root=tk.Tk()
+root.title("My First GUI Application")
+root.geometry("400x300")
+label=tk.Label(root, text="Hello, Tkinter!", font=("Arial", 16))
+label.pack(padx=50,pady=20)
+textbox=tk.Text(root, height=3, width=30)
+textbox.pack(padx=20,pady=20)
+entry=tk.Entry(root, width=50)
+entry.pack(padx=20,pady=10)
+ root.mainloop()
